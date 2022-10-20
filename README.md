@@ -17,6 +17,12 @@ or  An app that assists you in deciding where to live based on your objectives. 
 - Express
 
 #### **_Getting Started_**
-I can't really choose which app will be better to make with the technologies we have used so far.
+Get a Database of Movies and Food/ Location
+Develop Front End section allowing user input 
+Create form for sign up 
+Display Movies and Food / Location
+
 
 A Trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/M5zvFoMb/feelsproject)
+
+#### **_*Screenshots*_**
