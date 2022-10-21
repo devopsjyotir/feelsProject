@@ -45,4 +45,12 @@ const createPlaces = async () => {
       attributes: ["Parks", "Outdoor and Nature", "Museums"],
     },
   ];
+  await Places.insertMany(places);
+  console.log("Created some Places!");
 };
+const run = async () => {
+  await createPlaces();
+  db.close();
+};
+
+run();
