@@ -1,0 +1,27 @@
+const db = require("../db");
+const Places = require("../models/Places");
+
+db.on("error", console.error.bind(console, "MongoDB connection error:"));
+
+const createPlaces = async () => {
+  const places = [
+    {
+      name: "New York",
+      description:
+        "The most common mode of transportation for New Yorkers is still their own two feet. Recent improvements made to the city at large have made walking about much more comfortable. The High Line, a 1.45-mile elevated walkway above the Hudson River, and a more pedestrian-friendly Times Square are two of the city's most popular new features.",
+      image: "https://unsplash.com/photos/fEdPmPFLhLw",
+      attributes: [
+        "Walks",
+        "Shopping",
+        "Fashion",
+        "Music",
+        "Public Transportation",
+        "Broadway",
+        "Job Opportunities",
+        "Diversity",
+        "Scenery",
+        "Cool Weather",
+      ],
+    },
+  ];
+};
