@@ -23,5 +23,19 @@ const createPlaces = async () => {
         "Cool Weather",
       ],
     },
+    {
+      name: "Los Angeles",
+      description:
+        " A new WalletHub report came out on Wednesday declaring Los Angeles the greatest city in the United States for soccer. In addition, Los Angeles topped the list in WalletHub's 2019 research.It was a West Coast affair, and the West Coast was well-represented. Salt Lake City, Portland, Orlando, and Seattle rounded out the top five. ",
+      image: "https://unsplash.com/photos/9TUkYXQKXec",
+      attributes: [
+        "Soccer",
+        "Shopping",
+        "Music",
+        "Job Opportunities",
+        "Diversity",
+        "warm weather",
+      ],
+    },
   ];
 };

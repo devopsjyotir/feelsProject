@@ -10,4 +10,4 @@ const Places = new Schema(
   { timestamps: true }
 );
 
-module.exports = Places;
+module.exports = mongoose.model("Places", Places);
