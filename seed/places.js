@@ -1,5 +1,5 @@
 const db = require("../db");
-const Places = require("../models/Places");
+const Places = require("../models/places");
 
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
