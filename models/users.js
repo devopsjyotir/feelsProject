@@ -3,7 +3,6 @@ const Schema = mongoose.Schema;
 
 const Users = new Schema(
   {
-    name: "",
     interests: [{ type: String, required: true }],
   },
   { timestamps: true }

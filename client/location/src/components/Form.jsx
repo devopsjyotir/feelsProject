@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 
 import bgImg from "../image/zac-gudakov-faBWQt9i7dg-unsplash.jpg";
 const Form = () => {
@@ -11,11 +12,16 @@ const Form = () => {
 
   const [interestsState, setInterestsState] = useState([]);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     console.log(formState);
+    let res = await axios.post(
+      "http://localhost:3001/api/users",
+      interestsState
+    );
+    console.log(res.data);
     setFormState(initialState);
-    setInterestsState([]);
+    // setInterestsState([]);
   };
 
   // const [clicked, SetClicked] = useState(false);
