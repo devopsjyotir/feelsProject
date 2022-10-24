@@ -1,3 +1,14 @@
+import { useState } from "react";
+
+const newForm = () => {
+  const initialState = {
+    name: "",
+    email: "",
+    number: "",
+    interests: [""],
+  };
+};
+
 import bgImg from "../image/zac-gudakov-faBWQt9i7dg-unsplash.jpg";
 const Form = () => {
   return (
@@ -12,10 +23,23 @@ const Form = () => {
             <input type="text" placeholder="confirm email" />
             <input type="text" placeholder="number" />
             <div className="options">
-              <button type="button">running</button>
-              <button type="button">cross-fit</button>
-              <button type="button">soccer</button>
-              <button type="button">music</button>
+              <h4>Interests</h4>
+              <button type="button" className="individual-btn" value="running">
+                running
+              </button>
+              <button
+                type="button"
+                className="individual-btn"
+                value="cross-fit"
+              >
+                cross-fit
+              </button>
+              <button type="button" className="individual-btn" value="soccer">
+                soccer
+              </button>
+              <button type="button" className="individual-btn" value="music">
+                music
+              </button>
             </div>
             <button className="registerBtn" type="submit">
               Submit

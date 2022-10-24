@@ -186,3 +186,23 @@ h2 {
 
   cursor: pointer;
 }
+
+.options {
+  /* display: flex; */
+  /* margin: auto; */
+  padding: 10px;
+}
+
+.options h4 {
+  margin-bottom: 25px;
+}
+
+.individual-btn {
+  margin-right: 10px;
+  border: 1px solid rgb(205, 205, 205);
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: white;
+  /* padding: 10px; */
+}
