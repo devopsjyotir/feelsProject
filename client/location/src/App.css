@@ -1,13 +1,19 @@
 /* .page {
   /* background-color: aliceblue; */
-@import url("https://fonts.google.com/specimen/League+Spartan?vfquery=league");
-* > * {
-  font-family: "Gotha Med", Arial, Helvetica, sans-serif;
+
+/* @font-face {
+  font-family: League Spartan, sans-serif;
+  src: url("https://fonts.google.com/specimen/League+Spartan?vfquery=league");
+  font-display: swap;
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap");
+* {
+  font-family: "League Spartan", sans-serif;
   margin: 0;
 }
-
-body {
-  background-color: #fdf8f5;
+*/ body {
+  background-color: #fcf2ec;
 }
 section {
   margin-top: 200px;
@@ -75,6 +81,7 @@ section {
   background-color: #266150;
   padding: 10px 10px;
   color: #fdf8f5;
+  border: none;
 }
 
 #form > .btn {
@@ -98,6 +105,52 @@ section {
   padding: 3em 0;
 }
 
+.home-container {
+  width: 100vw;
+  display: flex;
+  height: 85vh;
+  transform: translateY(50px);
+
+  background-color: #e8cebf;
+
+  /* max-width: 900px; */
+}
+
+.home-container .column-1 {
+  margin: auto;
+  background-color: #e8cebf;
+  /* padding: 275px; */
+}
+
+h1 {
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 4em;
+  line-height: 1.5;
+}
+.homeBtn,
+.registerBtn {
+  background-color: #266150;
+  border: none;
+  padding: 2em;
+  color: #ece0d8;
+}
+
+.homeBtn:hover,
+.relocate:hover,
+.registerBtn:hover {
+  cursor: pointer;
+  background-color: #4f4846;
+  transition: 0.4s;
+}
+.home-container .column-2 img {
+  width: 40vw;
+  height: 85vh;
+  object-fit: cover;
+  display: none;
+}
+
 .inputForm .col-2 img {
   width: 480px;
   height: 100%;
@@ -108,10 +161,12 @@ section {
   display: none;
 }
 @media screen and (min-width: 860px) {
-  .inputForm .col-2 img {
+  .inputForm .col-2 img,
+  .home-container .column-2 img {
     display: initial;
   }
 }
+
 /* div {
   background-size: cover;
 } */
@@ -124,4 +179,10 @@ h4 {
 h2 {
   color: #4f4846;
   margin-bottom: 10px;
+}
+
+.home-container .column-2 img:hover {
+  opacity: 0.95;
+
+  cursor: pointer;
 }

@@ -13,9 +13,10 @@ const App = () => {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/form" element={<Form />} />
         </Routes>
       </main>
-      <Form />
+      {/* <Form /> */}
     </div>
   );
 };

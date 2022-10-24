@@ -4,15 +4,22 @@ const Form = () => {
     <section>
       <div className="inputForm">
         <div className="col-1">
-          <h2>Sign In</h2>
-          <span>Enjoy</span>
+          <h2>Find A Home</h2>
+          <span>HAve Fun!</span>
           <form id="form" className="flex flex-col">
             <input type="text" placeholder="full name" />
             <input type="text" placeholder="email" />
             <input type="text" placeholder="confirm email" />
             <input type="text" placeholder="number" />
-
-            <button className="btn">Register</button>
+            <div className="options">
+              <button type="button">running</button>
+              <button type="button">cross-fit</button>
+              <button type="button">soccer</button>
+              <button type="button">music</button>
+            </div>
+            <button className="registerBtn" type="submit">
+              Submit
+            </button>
           </form>
         </div>
 
