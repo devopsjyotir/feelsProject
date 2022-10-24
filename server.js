@@ -11,11 +11,11 @@ app.use(express.json());
 app.use("/api", routes);
 db.on("error", console.error.bind(console, "MongoDb connection error"));
 
-app.get("/", (req, res) => {
-  res.json({
-    message: "Get Money",
-  });
-});
+// app.get("/", (req, res) => {
+//   res.json({
+//     message: "Get Money",
+//   });
+// });
 
 app.listen(PORT, () => {
   console.log(`App listening on port: ${PORT}`);
