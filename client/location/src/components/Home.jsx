@@ -1,4 +1,5 @@
 import hmImg from "../image/pierre-jeanneret.jpg";
+import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div className="home-container">
@@ -8,7 +9,9 @@ const Home = () => {
           <br />
           TIME TO RELOCATE
         </h1>
-        <button className="homeBtn">RELOCATE</button>
+        <Link to="/form">
+          <button className="homeBtn">RELOCATE</button>
+        </Link>
       </div>
       <div className="column-2">
         <img src={hmImg} alt="homeImage"></img>

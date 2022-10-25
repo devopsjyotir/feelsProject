@@ -6,6 +6,7 @@
   src: url("https://fonts.google.com/specimen/League+Spartan?vfquery=league");
   font-display: swap;
 } */
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;700&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap");
 * {
@@ -28,16 +29,41 @@ section {
   color: white;
   padding: 1em;
   min-height: 2em;
-
-  font-size: 14px;
+  /* 
+  font-size: 14px; */
 }
 
 .navbar a {
   text-decoration: none;
+  position: relative;
   color: #4f4846;
   padding-left: 40px;
+  /* padding: 0 5px; */
   margin-left: 0.5em;
   margin-right: 1em;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  padding: 0 10px;
+}
+
+.linky::after {
+  position: absolute;
+  content: " ";
+  background-color: #4f4846;
+  width: 75%;
+  height: 1px;
+  left: 9px;
+  bottom: -5px;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 250ms ease-in;
+  /* left: 2px; */
+}
+
+.linky:hover::after {
+  transform: scaleX(1);
 }
 
 .App {
@@ -123,11 +149,12 @@ section {
 }
 
 h1 {
-  color: #ffffff;
+  color: #4f4846;
   margin-bottom: 30px;
-  font-weight: bold;
-  font-size: 4em;
+  font-weight: bolder;
+  font-size: 5em;
   line-height: 1.5;
+  font-family: "League Spartan", sans-serif;
 }
 .homeBtn,
 .registerBtn {
@@ -182,8 +209,8 @@ h2 {
 }
 
 .home-container .column-2 img:hover {
-  opacity: 0.95;
-
+  opacity: 0.8;
+  transition: 1s;
   cursor: pointer;
 }
 

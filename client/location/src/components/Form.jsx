@@ -7,34 +7,21 @@ const Form = () => {
     name: "",
     email: "",
     number: "",
+    interests: "",
   };
   const [formState, setFormState] = useState(initialState);
-
-  const [interestsState, setInterestsState] = useState([]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log(formState);
-    let res = await axios.post(
-      "http://localhost:3001/api/users",
-      interestsState
-    );
+    let res = await axios.post("http://localhost:3001/api/users", formState);
     console.log(res.data);
     setFormState(initialState);
-    // setInterestsState([]);
   };
-
-  // const [clicked, SetClicked] = useState(false);
 
   const handleChange = (event) => {
     setFormState({ ...formState, [event.target.id]: event.target.value });
-  };
-
-  const handleClick = (event) => {
-    event.currentTarget.style.border = "1px solid black";
-
-    // SetClicked(false);
-    setInterestsState([...interestsState, event.target.value]);
+    console.log(formState);
   };
 
   return (
@@ -58,7 +45,7 @@ const Form = () => {
               onChange={handleChange}
               value={formState.email}
             />
-            <input type="text" placeholder="confirm email" />
+
             <input
               type="text"
               placeholder="number"
@@ -67,40 +54,22 @@ const Form = () => {
               value={formState.number}
             />
             <div className="options" id="interests">
-              <h4>Interests</h4>
-              <button
-                type="button"
-                className="individual-btn"
-                value="running"
-                onClick={handleClick}
-              >
-                running
-              </button>
-              <button
-                type="button"
-                className="individual-btn"
-                value="cross-fit"
-                onClick={handleClick}
-              >
-                cross-fit
-              </button>
-              <button
-                type="button"
-                className="individual-btn"
-                value="soccer"
+              <h4>Interest</h4>
+              <select
+                className="individual-btn "
                 id="interests"
-                onClick={handleClick}
+                onChange={handleChange}
+                value={formState.interests}
               >
-                soccer
-              </button>
-              <button
-                type="button"
-                className="individual-btn"
-                value="music"
-                onClick={handleClick}
-              >
-                music
-              </button>
+                <option value="Soccer">Soccer</option>
+                <option value="Running">Running</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Music">Music</option>
+                <option value="Cross-fit">Cross-fit</option>
+                <option value="Broadway">Broadway</option>
+                <option value="Parks">Parks</option>
+                <option value="Outdoor & Nature">Outdoor & Nature</option>
+              </select>
             </div>
             <button className="registerBtn" type="submit">
               Submit
