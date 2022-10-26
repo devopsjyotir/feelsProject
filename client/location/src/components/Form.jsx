@@ -2,7 +2,23 @@ import { useState } from "react";
 import axios from "axios";
 
 import bgImg from "../image/zac-gudakov-faBWQt9i7dg-unsplash.jpg";
-const Form = () => {
+// import { useEffect } from "react";
+
+const Form = (props) => {
+  // const [place, setPlace] = useState([]);
+
+  // useEffect(() => {
+  //   const getPlaces = async () => {
+  //     try {
+  //       let res = await axios.get("http://localhost:3001/api/places/");
+  //       setPlace(res.data);
+  //     } catch (err) {
+  //       console.log(err);
+  //     }
+  //   };
+  //   getPlaces();
+  // }, []);
+
   const initialState = {
     name: "",
     email: "",
@@ -14,6 +30,7 @@ const Form = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log(formState);
+    localStorage.setItem("interests", formState.interests);
     let res = await axios.post("http://localhost:3001/api/users", formState);
     console.log(res.data);
     setFormState(initialState);
