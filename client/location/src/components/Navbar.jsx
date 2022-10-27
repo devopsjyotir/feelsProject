@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-// import React from "react";
 
 const Navbar = () => {
   return (
@@ -14,9 +13,6 @@ const Navbar = () => {
         </Link>
         <Link to="/form">
           <button className="relocate">Relocate</button>
-        </Link>
-        <Link to="/places">
-          <button className="relocate">Places</button>
         </Link>
       </div>
     </nav>

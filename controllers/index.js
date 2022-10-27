@@ -1,6 +1,7 @@
 const User = require("../models/users");
 const Places = require("../models/places");
 
+// FInding a city y id
 const getPlaces = async (req, res) => {
   try {
     const { id } = req.params;
@@ -16,6 +17,7 @@ const getPlaces = async (req, res) => {
   }
 };
 
+// find attributes that match interests
 const getAllPlaces = async (req, res) => {
   try {
     const { interests } = req.params;
@@ -31,6 +33,7 @@ const getAllPlaces = async (req, res) => {
   }
 };
 
+// call to Create a new user
 const createUser = async (req, res) => {
   try {
     const user = await new User(req.body);

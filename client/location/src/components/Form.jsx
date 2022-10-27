@@ -4,23 +4,9 @@ import { useNavigate } from "react-router-dom";
 import bgImg from "../image/zac-gudakov-faBWQt9i7dg-unsplash.jpg";
 import NewYork from "./City";
 import { Routes, Route } from "react-router-dom";
-// import { useEffect } from "react";
 
 const Form = (props) => {
   const navigate = useNavigate();
-  // const [place, setPlace] = useState([]);
-
-  // useEffect(() => {
-  //   const getPlaces = async () => {
-  //     try {
-  //       let res = await axios.get("http://localhost:3001/api/places/");
-  //       setPlace(res.data);
-  //     } catch (err) {
-  //       console.log(err);
-  //     }
-  //   };
-  //   getPlaces();
-  // }, []);
 
   const initialState = {
     name: "",
@@ -45,15 +31,11 @@ const Form = (props) => {
     console.log(formState);
   };
 
-  // const handleClick = (event) => {
-  //   navigate("/places");
-  // }
-
   return (
     <section>
       <div className="inputForm">
         <div className="col-1">
-          <h2>Find A Home</h2>
+          <h2>Find A Location</h2>
           <span>HAve Fun!</span>
           <form id="form" className="flex flex-col" onSubmit={handleSubmit}>
             <input

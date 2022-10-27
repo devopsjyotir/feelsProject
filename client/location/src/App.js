@@ -5,8 +5,6 @@ import Home from "./components/Home";
 import "./App.css";
 import Form from "./components/Form";
 import NewYork from "./components/City";
-// import { useEffect, useState } from "react";
-// import axios from "axios";
 
 const App = () => {
   return (

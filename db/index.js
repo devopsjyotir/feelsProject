@@ -1,8 +1,7 @@
 const mongoose = require("mongoose");
-let MONGODB_URI =
-  "mongodb+srv://devopsjyotir:Kodakcr7@cluster0.blzj0z9.mongodb.net/placesDatabase";
+
 mongoose
-  .connect(MONGODB_URI)
+  .connect(process.env.MONGODB_URI)
   .then(() => {
     console.log("Successfully connected to MongoDB.");
   })
