@@ -26,18 +26,20 @@ const NewYork = () => {
       <h1>Places</h1>
       {place.map((city) => (
         <div key={city._id}>
-          <h2 className="cityName">{city.name}</h2>
-          <div className="city-col1">
-            <img
-              src={city.image}
-              alt="city"
-              className="cityImage"
-              height={200}
-              width={200}
-            />
-          </div>
-          <div className="city-col2">
-            <p className="cityDescription">{city.description}</p>
+          <div className="cityContainer">
+            <div className="city-col2">
+              <h2 className="cityName">{city.name}</h2>
+              <p className="cityDescription">{city.description}</p>
+            </div>
+            <div className="city-col1">
+              <img
+                src={city.image}
+                alt="city"
+                className="cityImage"
+                height={250}
+                width={450}
+              />
+            </div>
           </div>
         </div>
       ))}

@@ -233,3 +233,35 @@ h2 {
   background-color: white;
   /* padding: 10px; */
 }
+
+/* City Page Styles */
+.cityContainer {
+  display: flex;
+  width: 40vw;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding-bottom: 200px;
+}
+
+.cityImage {
+  border-radius: 10px;
+  width: 400px;
+  height: 250px;
+}
+
+.cityImage:hover {
+  scale: 1.05;
+  transition: 1s;
+}
+
+.city-col2 {
+  margin-right: 200px;
+  width: 40%;
+}
+
+.cityDescription {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 2;
+}

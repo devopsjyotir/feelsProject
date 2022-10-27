@@ -1,10 +1,13 @@
 import { useState } from "react";
 import axios from "axios";
-
+import { useNavigate } from "react-router-dom";
 import bgImg from "../image/zac-gudakov-faBWQt9i7dg-unsplash.jpg";
+import NewYork from "./City";
+import { Routes, Route } from "react-router-dom";
 // import { useEffect } from "react";
 
 const Form = (props) => {
+  const navigate = useNavigate();
   // const [place, setPlace] = useState([]);
 
   // useEffect(() => {
@@ -34,12 +37,17 @@ const Form = (props) => {
     let res = await axios.post("http://localhost:3001/api/users", formState);
     console.log(res.data);
     setFormState(initialState);
+    navigate("/places");
   };
 
   const handleChange = (event) => {
     setFormState({ ...formState, [event.target.id]: event.target.value });
     console.log(formState);
   };
+
+  // const handleClick = (event) => {
+  //   navigate("/places");
+  // }
 
   return (
     <section>
@@ -88,15 +96,16 @@ const Form = (props) => {
                 <option value="Outdoor & Nature">Outdoor & Nature</option>
               </select>
             </div>
-            <button className="registerBtn" type="submit">
-              Submit
-            </button>
+            <button className="registerBtn">Submit</button>
           </form>
         </div>
 
         <div className="col-2">
           <img src={bgImg} alt="neighborhood" />
         </div>
+        <Routes>
+          <Route path="/places" element={<NewYork />} />
+        </Routes>
       </div>
     </section>
   );
