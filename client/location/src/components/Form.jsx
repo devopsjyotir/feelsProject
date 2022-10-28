@@ -20,6 +20,7 @@ const Form = (props) => {
     event.preventDefault();
     console.log(formState);
     localStorage.setItem("interests", formState.interests);
+
     let res = await axios.post("http://localhost:3001/api/users", formState);
     console.log(res.data);
     setFormState(initialState);
@@ -28,7 +29,6 @@ const Form = (props) => {
 
   const handleChange = (event) => {
     setFormState({ ...formState, [event.target.id]: event.target.value });
-    console.log(formState);
   };
 
   return (
@@ -36,11 +36,13 @@ const Form = (props) => {
       <div className="inputForm">
         <div className="col-1">
           <h2>Find A Location</h2>
-          <span>HAve Fun!</span>
+          <span>
+            Let's do this <span className="nameStyle">{formState.name}!</span>
+          </span>
           <form id="form" className="flex flex-col" onSubmit={handleSubmit}>
             <input
               type="text"
-              placeholder="full name"
+              placeholder="name"
               id="name"
               onChange={handleChange}
               value={formState.name}

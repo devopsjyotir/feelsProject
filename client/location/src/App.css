@@ -93,8 +93,9 @@ section {
   /* border-radius: 50px; */
 }
 
-#form > input:focus {
+#form input:focus {
   outline: none;
+  border: none;
 }
 .relocate {
   background-color: #266150;
@@ -103,7 +104,7 @@ section {
   border: none;
 }
 
-#form > .btn {
+#form .btn {
   background-color: #266150;
   color: #fdf8f5;
   font-size: 1em;
@@ -187,10 +188,6 @@ h1 {
   }
 }
 
-/* div {
-  background-size: cover;
-} */
-
 h4 {
   color: #4f4846;
   font-size: 25px;
@@ -208,8 +205,6 @@ h2 {
 }
 
 .options {
-  /* display: flex; */
-  /* margin: auto; */
   padding: 10px;
 }
 
@@ -267,4 +262,9 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.nameStyle {
+  color: #371c15;
+  font-weight: bold;
 }

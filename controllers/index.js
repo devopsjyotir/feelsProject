@@ -32,6 +32,18 @@ const getAllPlaces = async (req, res) => {
     return res.status(500).send(error.message);
   }
 };
+const getAllUsers = async (req, res) => {
+  try {
+    const { name } = req.params;
+    // console.log("interests ===", interests);
+    const users = await User.find({
+      name,
+    });
+    return res.status(200).json({ users });
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+};
 
 // call to Create a new user
 const createUser = async (req, res) => {
@@ -46,8 +58,23 @@ const createUser = async (req, res) => {
   }
 };
 
+// const getUser = async (req, res) => {
+//   try {
+//     const { name } = req.params;
+//     const userName = await User.find(name);
+//     if (userName) {
+//       return res.status(200).json({ userName });
+//     }
+//     return res.status(404).send("User with the specified name does not exist");
+//   } catch (error) {
+//     return res.status(500).json({ error: error.message });
+//   }
+// };
+
 module.exports = {
   createUser,
   getPlaces,
   getAllPlaces,
+  getAllUsers,
+  // getUser,
 };

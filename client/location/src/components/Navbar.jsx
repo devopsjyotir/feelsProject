@@ -8,9 +8,7 @@ const Navbar = () => {
         <Link to="/" className="linky">
           Home
         </Link>
-        <Link to="/contact" className="linky">
-          Contact
-        </Link>
+
         <Link to="/form">
           <button className="relocate">Relocate</button>
         </Link>

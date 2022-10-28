@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import "./App.css";
 import Form from "./components/Form";
 import NewYork from "./components/City";
+import Contact from "./components/Contact";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/places" element={<NewYork />} />
           <Route path="/form" element={<Form />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
     </div>

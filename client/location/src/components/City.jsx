@@ -15,7 +15,6 @@ const NewYork = () => {
         `http://localhost:3001/api/places/interests/${data}`
       );
 
-      console.log(res.data.places, data);
       setPlace(res.data.places);
     };
     getPlace();
