@@ -26,7 +26,7 @@ const NewYork = () => {
   const deletePlace = async ()=> {
     try {
       const res = await axios.delete(
-        `http://localhost:3001/api/places/${id}`
+        `http://localhost:3001/api/places/id/${id}`
       )
    
     
@@ -49,11 +49,11 @@ const NewYork = () => {
                 <h2 className="cityName">{city.name}</h2>
                 <p className="cityDescription">{city.description}</p>
               </div>
-             <button onClick={() => {
+             <button onClick={() => 
           
-              deletePlace()
+            {deletePlace()}
             
-          }}key={city._id}>Remove</button>
+          }key={city._id}>Remove</button>
               <div className="city-col1">
                 <img
                   src={city.image}
