@@ -1,5 +1,5 @@
 const User = require("../models/users");
-const Places = require("../models/places");
+const Places = require("../models/Places");
 
 // FInding a city y id
 const getPlaces = async (req, res) => {
@@ -58,23 +58,28 @@ const createUser = async (req, res) => {
   }
 };
 
-// const getUser = async (req, res) => {
-//   try {
-//     const { name } = req.params;
-//     const userName = await User.find(name);
-//     if (userName) {
-//       return res.status(200).json({ userName });
-//     }
-//     return res.status(404).send("User with the specified name does not exist");
-//   } catch (error) {
-//     return res.status(500).json({ error: error.message });
-//   }
-// };
+
+
+
+const deletePlace = async (req, res) => {
+  try {
+    const { id } = req.params
+    const deleted = await Places.findByIdAndDelete(id)
+    if (deleted) {
+      return res.status(200).send('Deleted')
+    }
+    throw new Error('Not found')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 
 module.exports = {
   createUser,
   getPlaces,
   getAllPlaces,
   getAllUsers,
-  // getUser,
+  deletePlace 
+ 
 };

@@ -3,10 +3,12 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
+import { useParams } from "react-router-dom"
 import axios from "axios";
 
 const NewYork = () => {
   const [place, setPlace] = useState([]);
+  let {id} = useParams()
 
   useEffect(() => {
     const data = localStorage.getItem("interests") || "Soccer";
@@ -18,7 +20,20 @@ const NewYork = () => {
       setPlace(res.data.places);
     };
     getPlace();
-  }, []);
+  }, [setPlace]);
+
+
+  const deletePlace = async ()=> {
+    try {
+      const res = await axios.delete(
+        `http://localhost:3001/api/places/${id}`
+      )
+   
+    
+    } catch (error) {
+      console.log(error)
+    }
+    }
 
   return (
     <div>
@@ -34,6 +49,11 @@ const NewYork = () => {
                 <h2 className="cityName">{city.name}</h2>
                 <p className="cityDescription">{city.description}</p>
               </div>
+             <button onClick={() => {
+          
+              deletePlace()
+            
+          }}key={city._id}>Remove</button>
               <div className="city-col1">
                 <img
                   src={city.image}
