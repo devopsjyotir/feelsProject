@@ -3,12 +3,12 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import { useParams } from "react-router-dom"
+// import { useParams } from "react-router-dom"
 import axios from "axios";
 
 const NewYork = () => {
   const [place, setPlace] = useState([]);
-  let {id} = useParams()
+  // let {id} = useParams()
 
   useEffect(() => {
     const data = localStorage.getItem("interests") || "Soccer";
@@ -20,20 +20,25 @@ const NewYork = () => {
       setPlace(res.data.places);
     };
     getPlace();
+   
   }, [setPlace]);
 
 
-  const deletePlace = async ()=> {
-    try {
-      const res = await axios.delete(
-        `http://localhost:3001/api/places/id/${id}`
-      )
-   
+  // const deletePlaces = async ()=> {
     
-    } catch (error) {
-      console.log(error)
-    }
-    }
+    
+  //   }
+
+
+
+    // const deletePlaces  = async () => {
+     
+  
+    //   let res = await axios.delete(`http://localhost:3001/api/places/id/${id}`);
+    //   console.log(res.data);
+    //   setPlace(res.data.places);
+    // ;
+    // };
 
   return (
     <div>
@@ -49,11 +54,19 @@ const NewYork = () => {
                 <h2 className="cityName">{city.name}</h2>
                 <p className="cityDescription">{city.description}</p>
               </div>
-             <button onClick={() => 
-          
-            {deletePlace()}
+             <button onClick={async () => {
+     
+     try {
+      const res = await axios.delete(
+        `http://localhost:3001/api/places/id/${(city._id)}`
+      )
+   console.log(res.data.places)
+    
+    } catch (error) {
+      console.log(error)
+    }}
             
-          }key={city._id}>Remove</button>
+          }key={city?._id}>Remove</button>
               <div className="city-col1">
                 <img
                   src={city.image}

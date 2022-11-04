@@ -1,11 +1,12 @@
 // import React from "react";
 import Navbar from "./components/Navbar";
 import { Routes, Route } from "react-router-dom";
+
 import Home from "./components/Home";
 import "./App.css";
 import Form from "./components/Form";
-import NewYork from "./components/City";
-import Contact from "./components/Contact";
+import City from "./components/City";
+
 
 const App = () => {
   return (
@@ -16,9 +17,9 @@ const App = () => {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/places" element={<NewYork />} />
-          <Route path="/form" element={<Form />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/places" element={<City />} />
+          <Route path="/form/*" element={<Form />} />
+     
         </Routes>
       </main>
     </div>
