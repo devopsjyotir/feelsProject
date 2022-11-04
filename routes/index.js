@@ -9,6 +9,7 @@ router.get("/places/:id", controllers.getPlaces);
 router.get("/places/interests/:interests", controllers.getAllPlaces);
 router.get("/users/name/:name", controllers.getAllUsers);
 router.delete("/places/id/:id", controllers.deletePlace);
+router.get("/places", controllers.getAllLocations)
 
 
 module.exports = router;

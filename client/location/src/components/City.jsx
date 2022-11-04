@@ -6,6 +6,7 @@ import { useEffect } from "react";
 // import { useParams } from "react-router-dom"
 import axios from "axios";
 
+
 const NewYork = () => {
   const [place, setPlace] = useState([]);
   // let {id} = useParams()
@@ -24,22 +25,9 @@ const NewYork = () => {
   }, [setPlace]);
 
 
-  // const deletePlaces = async ()=> {
-    
-    
-  //   }
-
-
-
-    // const deletePlaces  = async () => {
-     
   
-    //   let res = await axios.delete(`http://localhost:3001/api/places/id/${id}`);
-    //   console.log(res.data);
-    //   setPlace(res.data.places);
-    // ;
-    // };
 
+ 
   return (
     <div>
       <div className="CityPageContent">
@@ -57,7 +45,7 @@ const NewYork = () => {
       const res = await axios.delete(
         `http://localhost:3001/api/places/id/${(city._id)}`
       )
-   console.log(res.data.places)
+      
     
     } catch (error) {
       console.log(error)

@@ -45,6 +45,17 @@ const getAllUsers = async (req, res) => {
   }
 };
 
+
+const getAllLocations = async (req, res) => {
+  try {
+    const places = await Places.find()
+    return res.status(200).json({ places })
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
+
 // call to Create a new user
 const createUser = async (req, res) => {
   try {
@@ -80,6 +91,7 @@ module.exports = {
   getPlaces,
   getAllPlaces,
   getAllUsers,
-  deletePlace 
+  deletePlace,
+  getAllLocations
  
 };
