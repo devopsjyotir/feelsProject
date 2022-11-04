@@ -51,10 +51,7 @@ const NewYork = () => {
           <div key={city._id}>
             <div className="cityContainer">
               <div className="city-col2">
-                <h2 className="cityName">{city.name}</h2>
-                <p className="cityDescription">{city.description}</p>
-              </div>
-             <button onClick={async () => {
+              <button onClick={async () => {
      
      try {
       const res = await axios.delete(
@@ -67,6 +64,10 @@ const NewYork = () => {
     }}
             
           }key={city?._id}>Remove</button>
+                <h2 className="cityName">{city.name}</h2>
+                <p className="cityDescription">{city.description}</p>
+              </div>
+            
               <div className="city-col1">
                 <img
                   src={city.image}
