@@ -10,7 +10,7 @@ router.get("/places/interests/:interests", controllers.getAllPlaces);
 router.get("/users/name/:name", controllers.getAllUsers);
 router.delete("/places/id/:id", controllers.deletePlace);
 router.get("/places", controllers.getAllLocations)
-// router.put("/places/update/:id", controllers.updatePlace)
+router.post("/places", controllers.createLocation)
 
 
 module.exports = router;

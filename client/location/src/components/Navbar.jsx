@@ -12,8 +12,11 @@ const Navbar = () => {
         <Link to="/form">
           <button className="relocate">Relocate</button>
         </Link>
-        <Link to="/Locations" className="linky">
+        <Link to="/locations" className="linky">
      Locations
+        </Link>
+        <Link to="/new" className="linky">
+   Add Location
         </Link>
       </div>
     </nav>

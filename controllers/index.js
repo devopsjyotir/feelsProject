@@ -69,6 +69,18 @@ const createUser = async (req, res) => {
   }
 };
 
+const createLocation = async (req, res) => {
+  try {
+    const place = await new Places(req.body);
+    await place.save();
+    return res.status(201).json({
+      place,
+    });
+  } catch (error) {
+    return res.status(500).json({ error: error.message });
+  }
+};
+
 
 
 
@@ -95,6 +107,7 @@ module.exports = {
   getAllUsers,
   deletePlace,
   getAllLocations,
+  createLocation
 
  
 };
