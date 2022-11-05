@@ -29,7 +29,7 @@ const updateLocation = (id)=> {
     return(
         <div >
        
-          <h1 className="cityHeading">Woohoo You Just Added a Location!</h1>
+          <h1 className="cityHeading">ALL LOCATIONS. CLICK TO UPDATE OR DELETE</h1>
         
           <div className="card-section">
         {place.map((city) => (

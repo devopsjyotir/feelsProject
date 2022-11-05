@@ -365,3 +365,8 @@ background-color: #266150;
   margin-bottom: 60px;
 }
 
+
+.cityHeading{
+transform: translateX(40%);
+
+}
