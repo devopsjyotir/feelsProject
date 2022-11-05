@@ -17,44 +17,24 @@ useEffect(()=>{
     getLocations()
 }, [])
 
-const [formState, setFormState] = useState({
-    name:'',
-    image: '',
-    description: '',
-    attributes:[]
+const updateLocation = (id)=> {
+const newName = prompt("Enter New Name")
+axios.put('http://localhost:3001/api/places/update/', {newName: newName, id: id}).then(()=> {
+    setLocations(locations.map((city)=>{
+        return city._id == id ? {_id: id, name: newName} : city
+    }))
 })
-
-const handleChange = (event) => {
-    setFormState({...formState, [event.target.id]: event.target.value})
-}
-
-const updateLocation = async (event)=> {
-event.preventDefault()
-const response = await axios.put(`http://localhost:3001/api/places/update/${id}`, formState)
-setLocations([...locations, response.data])
-// setFormState({})
 }
 
     return(
         <div>
             {locations.map((city)=>(
-                <form onSubmit={updateLocation} >
-                     <label htmlFor="name">Name: </label>
-                <input id="name" value={formState.name} onChange={handleChange} />
-                <label htmlFor="image">Image: </label>
-                <input id="image" value={formState.image} onChange={handleChange} />
-                <label htmlFor="description">Description: </label>
-                <input
-                  id="description"
-                  value={formState.description}
-                  onChange={handleChange}
-                />
-                <label htmlFor="attributes">Link: </label>
-                <input id="attributes" value={formState.attributes} onChange={handleChange} />
-               
-               
-                <button type="submit">update Snail</button>
-              </form>
+                <div>
+                    <p>{city.name}</p>
+                    <button onClick={()=>{
+                        updateLocation(city._id)
+                    }}>Update</button>
+                </div>
             ))}
         </div>
     )
