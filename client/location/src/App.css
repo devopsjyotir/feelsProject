@@ -271,11 +271,12 @@ h2 {
 
 .card-section{
  
-width: 100vw;
-height: 100vh;
+/* width: 100vw; */
+
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .card{
@@ -301,7 +302,7 @@ height: 100vh;
 .card-body{
   width: 95%;
   height: 100%;
-  right: -100%;
+  right: -105%;
   top:0;
 
   position: absolute;
@@ -318,6 +319,13 @@ height: 100vh;
 
 .card:hover .card-body{
 right: 0;
+
+}
+
+.card:hover {
+  scale: 1.02;
+  transition: 1s;
+  cursor: pointer;
 }
 
 .city-name{
@@ -328,24 +336,32 @@ right: 0;
 
 .city-info{
   line-height: 15px;
-  font-weight: 400;
+  font-weight: 500;
   margin: 40px 0;
   font-size: 16px;
 
 }
 
 .card-btn{
-  background: #371c15;
-  width: 125px;
+background-color: #266150;
+  width: 100px;
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
   outline: none;
   border: none;
-  /* margin: 60px 30px; */
+  /* margin-right: 10px; */
+  margin-bottom: 20px;
   cursor: pointer;
   font-weight: 500px;
 }
 
+.card-btn:hover{
+  background-color: #412119;
+  transition: 1s;
+}
 
+.cityContainer .registerBtn{
+  margin-bottom: 60px;
+}
 

@@ -22,14 +22,14 @@ const createPlaces = async () => {
     {
       name: "Washington, D.C.",
       description:
-        " A new WalletHub report came out on Wednesday declaring Los Angeles the greatest city in the United States for soccer. In addition, Los Angeles topped the list in WalletHub's 2019 research.It was a West Coast affair, and the West Coast was well-represented. Salt Lake City, Portland, Orlando, and Seattle rounded out the top five. ",
+        " Washington DC may be known for all things politics, but there’s far more to this city.When designing ‘Federal City,’ his aim was to surround the hub of government with beautiful public gardens,places to embrace mindfulness and meditation and find an escape from the urban noise. ",
       image: "https://source.unsplash.com/ra3oAd6hrnM",
       attributes: ["Parks", "Outdoor and Nature", "Museums"],
     },
     {
       name: "Seattle",
       description:
-        " It's common knowledge that Seattle is home to a large population of active individuals who love the outdoors. Those who visit the Emerald City may easily find a group of people who share their passion for activities like skiing, mountain biking, or even ultimate frisbee. However, the Pacific Northwest has an amazing running community. ",
+        " It's common knowledge that Seattle is home to a large population of active individuals who love the outdoors. Those who visit the Emerald City may easily find a group of people who share their passion for activities like skiing, mountain biking, or even ultimate frisbee.",
       image: "https://source.unsplash.com/UmEYn_GYqFo",
       attributes: ["Running", "Soccer"],
     },
@@ -51,7 +51,7 @@ const createPlaces = async () => {
     {
       name: "Miami",
       description:
-        "While the city's beaches and art deco architecture are certainly draws, Miami is also known as a major hub for the fashion industry. There are many high-end boutiques, designer stores, and second-hand shops in the city, making it one of the most important fashion and entertainment hubs in the country. In a nutshell, it's the ultimate place to be if you work in the fashion or entertainment industries. In addition, Miami is home to a number of internationally recognized fashion weeks, including Mercedes-Benz Fashion Week, Miami Beach International Fashion Week, and Funkshion Fashion Week.",
+        "While the city's beaches and art deco architecture are certainly draws, Miami is also known as a major hub for the fashion industry. There are many high-end boutiques, designer stores, and second-hand shops in the city, making it one of the most important fashion and entertainment hubs in the country.",
       image: "https://source.unsplash.com/TxME_LN0o0c",
       attributes: ["Shopping", "Fashion"],
     },

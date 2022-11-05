@@ -26,14 +26,6 @@ const NewYork = () => {
   }, [setPlace]);
   
 
-  const updateLocation = (id)=> {
-    const newName = prompt("Enter New Name")
-    axios.put('http://localhost:3001/api/places/update/', {newName: newName, id: id}).then(()=> {
-        setPlace(place.map((city)=>{
-            return city._id === id ? {_id: id, name: newName, image: city.image, description:city.description} : city
-        }))
-    })
-    }
 
 
 
@@ -49,10 +41,8 @@ const NewYork = () => {
           <div key={city._id}>
             <div className="cityContainer">
               <div className="city-col2">
-              <button onClick={()=>{
-                        updateLocation(city._id)
-                    }}>Update</button>
-              <button onClick={async () => {
+             
+              <button className="registerBtn" onClick={async () => {
      
      try {
       const res = await axios.delete(

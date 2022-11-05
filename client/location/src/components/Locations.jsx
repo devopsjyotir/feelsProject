@@ -1,12 +1,12 @@
 import axios from "axios"
 import { useEffect } from "react"
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+
 
 
 const Locations = ()=>{
 const [place, setPlace] = useState([])
-let {id} = useParams()
+
 
 useEffect(()=>{
     const getLocations = async ()=>{
@@ -31,9 +31,9 @@ const updateLocation = (id)=> {
        
           <h1 className="cityHeading">Woohoo You Just Added a Location!</h1>
         
-      
+          <div className="card-section">
         {place.map((city) => (
-                 <div className="card-section">
+                 
           <div key={city._id} className="card">
              <img
                   src={city.image}
@@ -67,9 +67,9 @@ const updateLocation = (id)=> {
            
             </div>
            
-            </div>
+           
         ))}
-         
+          </div>
      </div>
        
     )
