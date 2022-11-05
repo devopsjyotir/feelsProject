@@ -29,6 +29,13 @@ app.put("/api/places/update", async(req, res)=>{
   res.send("updated")
 })
 
+app.delete("api/places/delete/:id", async (req,res)=>{
+  const id = req.params.id
+  await Places.findByIdAndRemove(id).exec()
+  res.send("deleted")
+})
+
+
 app.listen(PORT, () => {
   console.log(`App listening on port: ${PORT}`);
 });

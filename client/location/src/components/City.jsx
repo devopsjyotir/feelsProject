@@ -3,13 +3,14 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-// import { useParams } from "react-router-dom"
+
 import axios from "axios";
 
 
 const NewYork = () => {
   const [place, setPlace] = useState([]);
-  // let {id} = useParams()
+
+
 
   useEffect(() => {
     const data = localStorage.getItem("interests") || "Soccer";
@@ -23,9 +24,18 @@ const NewYork = () => {
     getPlace();
    
   }, [setPlace]);
-
-
   
+
+  const updateLocation = (id)=> {
+    const newName = prompt("Enter New Name")
+    axios.put('http://localhost:3001/api/places/update/', {newName: newName, id: id}).then(()=> {
+        setPlace(place.map((city)=>{
+            return city._id === id ? {_id: id, name: newName, image: city.image, description:city.description} : city
+        }))
+    })
+    }
+
+
 
  
   return (
@@ -39,6 +49,9 @@ const NewYork = () => {
           <div key={city._id}>
             <div className="cityContainer">
               <div className="city-col2">
+              <button onClick={()=>{
+                        updateLocation(city._id)
+                    }}>Update</button>
               <button onClick={async () => {
      
      try {
@@ -46,6 +59,7 @@ const NewYork = () => {
         `http://localhost:3001/api/places/id/${(city._id)}`
       )
       
+      console.log(res)
     
     } catch (error) {
       console.log(error)

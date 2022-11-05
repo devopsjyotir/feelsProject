@@ -86,20 +86,7 @@ const deletePlace = async (req, res) => {
 }
 
 
-// const updatePlace = async(req, res) => {
-//   try{
-// const {id} = req.params
-//     const updated = await Places.findByIdAndUpdate(id, req.body, { new: true});
-// await updated.save()
 
-  
-//       return res.status(200).json(updated)
-  
-  
-//   } catch (error) {
-//     return res.status(500).send(error.message)
-//   }
-// }
 
 module.exports = {
   createUser,
@@ -108,6 +95,6 @@ module.exports = {
   getAllUsers,
   deletePlace,
   getAllLocations,
-  // updatePlace
+
  
 };
