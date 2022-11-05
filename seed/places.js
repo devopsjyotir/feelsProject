@@ -29,7 +29,7 @@ const createPlaces = async () => {
     {
       name: "Seattle",
       description:
-        " It's common knowledge that Seattle is home to a large population of active individuals who love the outdoors. Those who visit the Emerald City may easily find a group of people who share their passion for activities like skiing, mountain biking, or even ultimate frisbee. However, the Pacific Northwest has an amazing running community. It's easy to find a running group in your area thanks to Seattle Running Club and a number of other large-scale organizations. And due of the beautiful landscape, you'll be treated to some spectacular scenery when you're out and about. ",
+        " It's common knowledge that Seattle is home to a large population of active individuals who love the outdoors. Those who visit the Emerald City may easily find a group of people who share their passion for activities like skiing, mountain biking, or even ultimate frisbee. However, the Pacific Northwest has an amazing running community. ",
       image: "https://source.unsplash.com/UmEYn_GYqFo",
       attributes: ["Running", "Soccer"],
     },
@@ -37,14 +37,14 @@ const createPlaces = async () => {
     {
       name: "New Orleans",
       description:
-        "New Orleans is the quintessential representation of jazz and the blues. This music is essential to the character of the city. Where else than New Orleans might the idea of a 'jazz funeral' (complete with a brass band procession) have originated to honor the memory of the departed? Tremé, Crescent City, Bourbon Street, and Preservation Hall are just few of the unique neighborhoods where you may catch a night of live music performed by residents and visiting performers.",
+        "New Orleans is the quintessential representation of jazz and the blues. This music is essential to the character of the city. Where else than New Orleans might the idea of a 'jazz funeral' (complete with a brass band procession) have originated to honor the memory of the departed? Tremé, Crescent City, Bourbon Street.",
       image: "https://source.unsplash.com/t-A4eLb3jpw",
       attributes: ["Music"],
     },
     {
       name: "Austin, TX",
       description:
-        "Austin's reputation as the 'Live Music Capital of the World' is well-deserved. Live music may be found in many of the city's restaurants and bars; it is, after all, the inspiration for such famous musicians as Janis Joplin, Jamestown Revival, Explosions in the Sky, and Stevie Ray Vaughn. South by Southwest, Fun Fun Fun Fest, and Austin City Limits are just a few of Austin's many outdoor festivals. Make sure to stop by the timeless Continental Club and the ever-popular Stubb's while you're in town. You could even discover that you've learned a new dance or two before the night is up!",
+        "Austin's reputation as the 'Live Music Capital of the World' is well-deserved. Live music may be found in many of the city's restaurants and bars; it is, after all, the inspiration for such famous musicians as Janis Joplin, Jamestown Revival, Explosions in the Sky, and Stevie Ray Vaughn. South by Southwest, Fun Fun Fun Fest, and Austin City Limits are just a few of Austin's many outdoor festivals.",
       image: "https://source.unsplash.com/AlBgcDfDG_s",
       attributes: ["Music"],
     },
