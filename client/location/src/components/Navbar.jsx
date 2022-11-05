@@ -12,6 +12,9 @@ const Navbar = () => {
         <Link to="/form">
           <button className="relocate">Relocate</button>
         </Link>
+        <Link to="/Locations" className="linky">
+     Locations
+        </Link>
       </div>
     </nav>
   );

@@ -12,6 +12,7 @@ const Home = () => {
         <Link to="/form">
           <button className="homeBtn">RELOCATE</button>
         </Link>
+        
       </div>
       <div className="column-2">
         <img src={hmImg} alt="homeImage"></img>
