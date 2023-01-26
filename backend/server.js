@@ -1,6 +1,6 @@
 const express = require("express");
 const dotenv = require("dotenv").config();
-const db = require("./db");
+const db = require("./db/index.js");
 const path = require("path")
 const routes = require("./routes");
 const cors = require("cors");
